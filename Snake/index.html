@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <style media="screen">
+    body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: yellow;
+  }
+
+  canvas {
+    border: 1px black solid;
+    margin: 20px;
+    display: inline;
+    background-color: white;
+  }
+
+  .canvas {
+    display: grid;
+    text-align: center !important;
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  .radio {
+    text-align: left;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 45% 45%;
+    grid-template-areas:
+    "a a"
+    "b c"
+    "d d";
+    background-color: violet;
+  }
+
+  .a {
+    grid-area: a;
+    font-size: 2em;
+  }
+
+  .b {
+    grid-area: b;
+  }
+
+  .c {
+    grid-area: c;
+  }
+
+  .radioTitle {
+    padding-top: 10%;
+    font-size: 1.25em;
+  }
+
+  .info {
+    background-color: violet;
+  }
+</style>
+  <title></title>
+</head>
+
+<body>
+  <img style="display: none;" src="bilder/grass.png" id="grass" width="20" height="20">
+  <img style="display: none;" src="bilder/sushi.png" id="sushi" width="20" height="20">
+  <div class="canvas">
+    <div class="info controls">
+      <div style="text-align: center; font-size: 2em; grid-area: a;" class="">
+        Info
+      </div>
+
+      <div style="grid-area: b; text-align: right; font-size: 1em;" class="label">
+        Amount of points: &nbsp;<br />
+        EatTimer: &nbsp;<br />
+        PowerupTimer: &nbsp;<br /><br /><br />
+        Green fruits give points<br />
+        Brown ones make walls disabled for 5 seconds
+      </div>
+      <div style="grid-area: c; text-align: left; font-size: 1em;" class="labelInfo">
+        <div id="points" class="points">0 Poäng</div>
+        <div id="foodTimer" style="" class="">10 Sekunder</div>
+        <div id="powerup" class="powerup">0 Sekunder</div>
+      </div>
+      <div style="text-align: right;" id="highscores">
+        Highscores: &nbsp;
+      </div>
+      <div style="text-align: left;" id="highscore" class="">
+
+      </div>
+
+    </div>
+    <div style="text-align: middle;" class="">
+      <div class="">
+        <button style="padding: 15px; padding-left: 100px; padding-right: 100px; font-weight: bold;" type="button" id="button" name="button">Start</button>
+      </div>
+      <canvas style="display: inline-block;" id="canvas" width="200" height="200"></canvas>
+    </div>
+    <div class="controls">
+      <div class="a">
+        Kontroller
+      </div>
+      <div class="b">
+        <div class="radioTitle">
+          Skins
+        </div>
+        <div class="radio">
+          <form class="" action="#" method="post" class="form" id="form">
+            <input type="radio" id="red" name="skin" value="red">
+            <label for="red">Red</label><br />
+            <input type="radio" id="yellow" name="skin" value="yellow">
+            <label for="yellow">Yellow</label><br />
+            <input type="radio" id="grass" name="skin" value="grass">
+            <label for="grass">Grass</label><br />
+            <input type="radio" id="sushi" name="skin" value="sushi">
+            <label for="sushi">Sushi</label>
+          </form>
+        </div>
+      </div>
+      <div class="c">
+        <div class="radioTitle">
+          SpelModell
+        </div>
+        <div style="text-align: left;" class="">
+          <input type="checkbox" id="walls" name="gameModel" value="noWalls">
+          <label for="gameModel">Go through walls</label><br />
+          <input type="checkbox" id="enemy" name="gameModel" value="enemy">
+          <label for="enemy">Enemy sanke that eats food</label><br />
+          <input type="checkbox" id="obstacle" name="gameModel" value="obstacle">
+          <label for="obstacle">Living Walls</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/snake.js" charset="utf-8"></script>
+</body>
+
+</html>

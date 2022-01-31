@@ -1,0 +1,1295 @@
+@charset "UTF-8";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+/* Navigator --------------------------------------*/
+
+nav, header {
+  width: 100%;
+  height: 175px;
+  line-height: 125px;
+  position: fixed;
+  z-index: 100000;
+  transition: 0.1s;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.links>ol>li, .links-products>ol>li {
+  display: inline;
+  margin-right: 3%;
+  font-size: calc(1vw + 1vh);
+}
+
+.links>ol>li>a:hover, .links-products>ol>li>a:hover {
+  color: red;
+}
+
+.logo {
+  z-index: 1000;
+  width: 100%;
+  transition: 0.5s;
+  max-width: 250px;
+}
+
+.dehaze {
+  display: none;
+}
+
+.dehazebox {
+  display: none;
+}
+
+.linksol {
+  padding-left: 0;
+}
+
+.logopic, .logopic-products {
+  width: 100%;
+}
+
+.links, .links-products {
+  float: left;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  text-align: right;
+}
+
+.black-header {
+  background-color: #D3D3D3;
+}
+
+.nav-slide-down {
+  display: none;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  grid-area: navi;
+  background-color: rgb(48, 48, 48);
+}
+
+.product-nav {
+}
+
+/*--------------------------------------------------*/
+
+
+/* Index Slideshow -----------------------------------*/
+.slide-content-container {
+  text-align: center;
+  color: black;
+  height: 600px;
+  width: 100%;
+  display: table;
+}
+
+.slidetable {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 600px;
+  padding-top: 25px;
+}
+
+.front {
+  display: grid;
+  margin: 50px;
+  grid-template-columns: 40% auto 40%;
+}
+
+.fronttext {
+  margin-top: -10px;
+  font-size: 20px;
+}
+
+.slide-line {
+  height: 2px;
+  background-color: black;
+}
+
+.shopping-button {
+  width: 225px;
+  height: 60px;
+  font-size: 20px;
+  background-color: transparent;
+  color: black;
+  border: black 4px solid;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.shopping-button:hover {
+  border: white 2px solid;
+  background-color: #303030;
+  color: white;
+  transition: 0.5s;
+}
+
+#slideone {
+  background-image: url("../img/citrus.jpg");
+  height: 600px;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slidetwo {
+  background-image: url("../img/lemons.jpg");
+  width: 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slidethree {
+  background-image: url("../img/oranges.jpg");
+  width: 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slideshow {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+#slideshow>div {
+  position: absolute;
+  width: 100%;
+}
+
+/*--------------------------------------------------*/
+
+
+/* Items Slideshow ----------------------------------*/
+
+/* Welcome above slider*/
+
+.welcome {
+  text-align: center;
+  color: grey;
+  padding-top: 160px;
+  font-size: 16px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+}
+
+.welcome-breaker {
+  width: 3%;
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+
+.welcome-caption {
+  text-align: center;
+  font-size: 25px;
+}
+
+/*---------------------*/
+
+.slider {
+  width: 67%;
+  margin: 100px auto;
+  margin-top: 70px;
+  height: 400px;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slider-pictures {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+.slider-items-description {
+  font-family: 'Playfair Display';
+  text-align: center;
+  padding-top: 30px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  transition: 0.4s;
+}
+
+.slider-items-description:hover {
+  color: #FF4500;
+}
+
+.slider-items-pricetag {
+  color: #FF4500;
+  font-size: 18px;
+}
+
+.pic1 {
+  background-image: url("../img/bottle22_comp.png");
+}
+
+.pic2 {
+  background-image: url("../img/bottle19_comp.png");
+}
+
+.pic3 {
+  background-image: url("../img/bottle10_comp.png");
+}
+
+.pic4 {
+  background-image: url("../img/bottle23_comp.png");
+}
+
+.pic5 {
+  background-image: url("../img/bottle16_comp.png");
+}
+
+.pic6 {
+  background-image: url("../img/bottle20_comp.png");
+}
+/*--------------------------------------------------*/
+
+/* Index Description ----------------------------------*/
+
+.index-description {
+  text-align: center;
+  margin: auto;
+  font-family: Montserrat;
+  font-size: 14px;
+  color: gray;
+  padding-top: 70px;
+}
+
+.inside-index-description {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+}
+
+
+/* -------------------------------------------------------*/
+
+/* Footer -------------------------------------------------*/
+
+footer {
+  margin-top: 100px;
+  height: 200px;
+  background-color: #181818;
+  width: 100%;
+  color: white;
+}
+
+.footer-logo {
+  width: 200px;
+  float: left;
+}
+
+.footer-list {
+  height: 200px;
+  line-height: 200px;
+  overflow: hidden;
+}
+
+.footer-list-ul {
+  margin-top: 0;
+  text-align: right;
+  margin-right: 100px;
+}
+
+.footer-list-ul > li {
+  list-style-type: none;
+  display: inline;
+  overflow: hidden;
+  border-right: 2px solid white;
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* -------------------------------------------------------*/
+
+/* Webshop --------------------------------------------*/
+.products-container {
+  display: grid;
+  grid-template-columns: 80% 30%;
+}
+
+.our-products {
+  background-image: url("../img/bottle9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 400px;
+  margin: 100px;
+  margin-left: 50px;
+  grid-gap: 50px;
+}
+
+.display-product {
+}
+
+.products-description {
+  text-align: center;
+}
+
+.shadow-box {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  height: 100%;
+  width: 100%;
+}
+
+.product-picture-setting {
+  height: 360px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.product1 {
+  background-image: url("../img/bottle22_comp.png");
+}
+
+.product2 {
+  background-image: url("../img/bottle10_comp.png");
+}
+
+.product3 {
+  background-image: url("../img/bottle19_comp.png");
+}
+
+.product4 {
+  background-image: url("../img/bottle23_comp.png");
+}
+
+.product5 {
+  background-image: url("../img/bottle16_comp.png");
+}
+
+.product6 {
+  background-image: url("../img/bottle20_comp.png");
+}
+
+.product-sort {
+  background-color: #ffe066;
+  width: 100%;
+  font-size: 15px;
+}
+
+.webshop-filter {
+  margin-top: 100px;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.webshop-right {
+
+}
+
+.filter-buttons {
+  border: black 2px solid;
+  background-color: white;
+  color: black;
+  width: 80%;
+  font-size: 20px;
+  margin-top: 5%;
+  height: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.filter-buttons:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.filter-navigator-title {
+  font-size: 30px;
+  margin: 10px;
+  padding-top: 0px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.filter-buttons-container {
+  text-align: center;
+}
+
+.webshop-filter-mobile {
+  display: none;
+}
+
+/* Products ------------------------------------------*/
+.product-container {
+  overflow: hidden;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 100px;
+  padding-top: 150px;
+  overflow: visible;
+}
+
+.product-picture {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  width: 400px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.product-price {
+  color: red;
+}
+
+.fontsize16 {
+  font-size: 16px;
+}
+
+.product-description {
+  padding: 20px 30px;
+  padding-bottom: 0px;
+}
+
+.inside-description {
+  line-height: 30px;
+  color: grey;
+}
+
+.product-description-break {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.titlemobile {
+  display: none;
+}
+/*-------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/* FAQ ---------------------------------------------------*/
+.faq {
+  background-repeat: no-repeat;
+  background-image: url("../img/our-products.jpg");
+  background-size: cover;
+}
+
+.faq-title {
+  font-size: 50px;
+  font-family: Roboto;
+  padding: 30px;
+}
+
+.faq-search {
+  width: 80%;
+  height: 30px;
+  border-radius: 1px;
+  border: 0;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.faq-questions-title {
+  text-align: center;
+  padding: 30px;
+  font-size: 70px;
+}
+
+.break-10 {
+  width: 10%;
+}
+
+.faq-container {
+  margin: 100px;
+  margin-top: 50px;
+  font-family: 'Playfair Display';
+}
+
+.faq-navigator-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.faq-navigator {
+  border: 1px black solid;
+  width: 80%;
+  height: 300px;
+  background-color: gainsboro;
+}
+
+.faq-navigator-links {
+  list-style-type: none;
+}
+
+.faq-navigator-links>a{
+  color: #FF0033;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.faq-navigator-links>a>li{
+  margin-bottom: 7px;
+}
+
+.faq-button {
+  border: 1px black solid;
+  background-color: #FFFF99;
+  color: black;
+  font-size: 15px;
+  padding: 10px;
+  margin: 30px;
+  width: 250px;
+}
+
+.faq-subsection {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 15px;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.faq-subsection-container {
+  border-bottom: 1px solid gray;
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.subsection-size {
+  font-size: 30px;
+}
+
+.insidefaq {
+  display: none;
+  font-size: 20px;
+  margin: 20px;
+  font-family: roboto;
+  font-weight: bold;
+}
+
+.faq-subsection-plus {
+  float: right;
+  font-size: 35px;
+  height: 40px;
+  margin-right: 30px;
+}
+
+.faq-inside-faq {
+  margin-left: 50px;
+  display: none;
+}
+
+.subfaq {
+  margin-bottom: 5px;
+}
+
+.fullborder {
+  border: 1px black solid;
+}
+
+.contact {
+  margin-left: 5%;
+  width: 30%;
+}
+
+.contacttitle {
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 5%;
+  border-bottom: 1px solid black;
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+/*--------------------------------------------------------*/
+/*About Us ------------------------------------------------*/
+.about {
+  background-repeat: no-repeat;
+  background-image: url("../img/about5.jpg");
+  background-size: cover;
+}
+
+.about-title {
+  margin-top: 7%;
+  text-align: center;
+  font-size: 70px;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-areas:
+  'topleft topleft topleft topright topright topright'
+  'middle middle middle middle middle middle'
+  'bottomleft bottomleft bottommiddle bottommiddle bottomright bottomright';
+  width: 80%;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  margin: auto;
+  line-height: 25px;
+  text-align: center;
+}
+
+.about-topleft {
+  grid-area: topleft;
+  padding-right: 70px;
+}
+
+.about-topright {
+  grid-area: topright;
+  padding-left: 70px;
+}
+
+.about-middle {
+  grid-area: middle;
+  background-image: url("../img/aboutus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 85%;
+  margin: auto;
+}
+
+.about-bottomleft {
+  grid-area: bottomleft;
+  padding-right: 70px;
+}
+
+.about-bottommiddle {
+  grid-area: bottommiddle;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.about-bottomright {
+  grid-area: bottomright;
+  padding-left: 70px;
+}
+
+.about-titles {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about-title-desc {
+  position: relative;
+  top: -10px;
+}
+
+.material-icons {
+  padding-right: 0px;
+  font-size: 40px;
+  padding-top: 10px;
+}
+
+.about-bottompart {
+  padding-top: 70px;
+}
+
+.about-toppart {
+  padding-bottom: 70px;
+}
+
+/*--------------------------------------------------------*/
+/* Comapre Juices -------------------------------------------------*/
+
+.guavabackground {
+  background-image: url("../img/guava_comp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cranberrybackground {
+  background-image: url("../img/cranberry_comp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.waterbackground {
+  background-image: url("../img/water_comp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gingerbackground {
+  background-image: url("../img/ginger_comp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.rootbeerbackground {
+/*  background-image: url("../img/rootbeer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;*/
+background-color: #814D30;
+}
+
+.tropicalbackgrond {
+  background-image: url("../img/tropical_comp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.compare-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.compare-title-break {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.compare-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 200px;
+}
+
+.compare-boxes {
+  border: 1px black solid;
+  width: 90%;
+  margin: auto;
+  margin-top: 0;
+}
+
+.list-of-juices {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.list-of-juices>li {
+  height: 70px;
+  font-size: 20px;
+  line-height: 70px;
+  cursor: pointer;
+}
+
+.list-of-juices>li:hover {
+  text-decoration: underline;
+}
+
+.black {
+  color: white;
+  background-color: #484848;
+}
+
+.white {
+  background-color: #A0A0A0	;
+}
+
+.compare-title-box {
+  text-align: center;
+  margin: 20px;
+  height: 400px;
+}
+
+.compare-picture {
+  width: 30%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+.compare-table-container>div>ul {
+  list-style-type: none;
+}
+
+.compare-table-container>div>ul>li {
+  margin-bottom: 10px;
+  margin-left: 5%;
+  border-bottom: 1px black solid;
+  width: 80%;
+}
+
+.compare-table-container>div {
+  margin: auto;
+}
+
+.compare-lable {
+  float: right;
+}
+
+.compare-left, .compare-right {
+  display: none;
+}
+
+.crans {
+  display: none;
+}
+
+.closecompare, .closecompare-right {
+  padding: 10px;
+  cursor: pointer;
+}
+/*--------------------------------------------------------*/
+/* Bestall -------------------------------------------------------*/
+.form-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10%;
+  grid-template-rows: 43% 43%;
+  margin: 10%;
+  margin-top: 300px;
+}
+
+.form-item-title {
+  text-align: center;
+}
+
+.form-pictures {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  width: 60%;
+  margin: auto;
+  height: 100%;
+}
+
+.form-item-container {
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+label {
+  margin: 5px;
+  margin-left: 0;
+  display: block;
+}
+
+.form-info {
+  width: 90%;
+  height: 25px;
+}
+
+.info {
+  width: 90%;
+}
+
+.order {
+  height: 25px;
+  margin-top: 30px;
+  display: block;
+}
+
+.cart {
+  border-right: 1px solid black;
+  width: 85%;
+}
+
+.cart-title {
+  text-align: center;
+}
+
+.cart-list {
+  list-style-type: none;
+}
+
+.cart-list>li {
+  margin-top: 10px;
+}
+
+.amount {
+  float: right;
+  margin-right: 10%;
+}
+/*--------------------------------------------------------*/
+/* Thank You page ---------------------------------------------------*/
+.body100 {
+  height: 100%;
+}
+
+.thanks {
+  background-image: url("../img/bottle13.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+}
+
+.incase {
+  font-size: 30px;
+}
+
+.incaselink {
+  color: blue;
+}
+
+.incaselink:hover {
+  text-decoration: underline;
+}
+
+.redirect {
+  width: 80%;
+  height: 20%;
+  color: black;
+  background-color: white;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+}
+
+
+/*--------------------------------------------------------*/
+/* Mobile ------------------------------------------------------*/
+
+@media screen and (max-width: 650px) {
+
+  body {
+    overflow-x: scroll;
+    width: auto;
+  }
+
+ /* Navigator ----------------------------------------------------*/
+
+  .shopping-cart-mobile {
+  margin-right: 20px;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-areas:
+    'logo dehaze'
+    'navi navi';
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 90px auto;
+  }
+
+  .logo {
+    z-index: 1000;
+    width: 250px;
+    grid-area: logo;
+  }
+
+  .logopic, .logopic-products {
+    width: 100%;
+  }
+
+  .links, .links-products {
+    display: none;
+  }
+
+  .black-header {
+    background-color: #D3D3D3;
+  }
+
+  .dehazebox {
+    display: block;
+    padding-right: 10%;
+    grid-area: dehaze;
+  }
+
+  .dehaze {
+    display: block;
+    z-index: 1000;
+    width: 100%;
+    transition: 0.5s;
+    color: white;
+    text-align: right;
+  }
+
+  .dehazeicon {
+    line-height: 90px;
+    height: 90px;
+    padding: 0;
+  }
+
+  .nav-slide-down {
+    grid-area: navi;
+  }
+
+  .nav-slide-down-slider {
+    list-style-type: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-slide-down-slider>li {
+    padding-left: 5%;
+  }
+  /*--------------------------------------------------------*/
+  /* Front Slideshow ----------------------------------------------------*/
+
+  .front {
+    display: grid;
+    margin: 50px;
+    grid-template-columns: auto;
+  }
+
+  .slide-line {
+    display: none;
+  }
+
+  .footer-list {
+    display: none;
+  }
+
+  .footer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+/*--------------------------------------------------------*/
+/* Webshop --------------------------------------------*/
+
+.products-container {
+  grid-template-columns: 100%;
+}
+
+.product-grid {
+  grid-template-columns: auto;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.product-grid>div {
+
+}
+
+.webshop-right {
+  display: none;
+}
+
+.webshop-filter-mobile {
+  display: block;
+  padding: 50px;
+  border-bottom: 1px solid black;
+  margin-bottom: 0px;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-areas:
+  'topleft'
+  'topright'
+  'middle'
+  'bottomleft'
+  'bottommiddle'
+  'bottomright';
+  width: 80%;
+  grid-template-columns:100%;
+  margin: auto;
+  line-height: 25px;
+  text-align: center;
+}
+
+.about-topleft, .about-topright, .about-middle, .about-bottomleft, .about-bottommiddle, .about-bottomright {
+  padding: 0;
+  padding-bottom: 25%;
+}
+
+.about-middle {
+  height: 100px;
+  width: 100%;
+}
+
+.about-icons {
+  display: block;
+  padding-bottom: 20px;
+}
+/* -----------------------------------------------------*/
+/* FAQ ---------------------------------------------------*/
+
+.faq-container {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 0;
+  margin-left: 50px;
+  font-family: 'Playfair Display';
+}
+
+.faq-questions-title {
+  text-align: center;
+  padding: 30px;
+  font-size: 50px;
+}
+
+.faq-navigator {
+  display: none;
+}
+
+.faq-subsection-container {
+  width: 90%;
+}
+
+.faq-inside-faq {
+  margin-left: 5%;
+  font-size: 25px;
+  height: 200%;
+  padding-bottom: 10%;
+  margin-bottom: 20px;
+}
+
+.insidefaq {
+  padding-top: 20%;
+}
+
+.subfaq {
+  width: 90%;
+  height: 100%;
+}
+
+.faq-subsection-plus {
+  margin-right: 10%;
+}
+
+.contact {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.contacttitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  border-bottom: 1px solid black;
+  width: 90%;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.textarea {
+  width: 90%;
+}
+/* -----------------------------------------------------*/
+/* Products  -----------------------------------------------------*/
+
+.products {
+  grid-template-columns: 100%;
+  margin: 10%;
+}
+
+.product-picture {
+  width: 100%;
+  margin-bottom: 20%;
+}
+
+.titlemobile {
+  display: block;
+}
+
+.normal-title {
+  display: none;
+}
+
+/* -----------------------------------------------------*/
+/* Comapre Juices -------------------------------------------------*/
+
+.compare-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10%;
+  margin-bottom: 200px;
+}
+
+.compare-picture {
+  width: 90%;
+  margin-bottom: 2%;
+}
+/*--------------------------------------------------------*/
+/* Bestall -------------------------------------------------------*/
+.form-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10%;
+  grid-template-rows: 15% 15% 15% 15% 15% 15%;
+  margin-top: 50%;
+  height: 100%;
+  margin-bottom: 230%;
+}
+
+.cart {
+  border-right: 0px solid black;
+  border-bottom: 1px solid black;
+  width: 95%;
+  margin:auto;
+}
+
+.info {
+  margin-left: 5%;
+}
+
+.info-grid {
+  grid-template-columns: 100%;
+}
+
+/*--------------------------------------------------------*/
+
+}
+/*--------------------------------------------------------*/

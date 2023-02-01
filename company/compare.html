@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="foretag_css.css" />
+    <title>Compare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="bilder/company-logo.png" />
+    <script src="foretag.js"></script>
+  </head>
+  <body>
+    <div class="compare-container">
+      <div class="logo">
+        <img src="bilder/company-logo.png" alt="Logga" height="120" />
+        <div class="logo-font">SKIGEEK</div>
+      </div>
+      <div class="blank"></div>
+      <div class="meny">
+        <nav class="botnav">
+          <a href="index.html">HOME</a>
+          <a href="shop.html" id="current">SHOP</a>
+          <a href="about.html">ABOUT</a>
+        </nav>
+      </div>
+      <div class="pic start">
+        <img src="bilder/compare-img.jpg" alt="skidåkare" class="w100" />
+        <div class="shop-text">COMPARE</div>
+      </div>
+      <div class="compare">
+        <div class="compare1">
+          <select
+            class="product-select-half"
+            name="comparison-product1"
+            onchange="displayComparisonLeft(this)"
+          >
+            <option value="">--CHOOSE PRODUCT--</option>
+            <option value="ct1">Candide Thovex 1.0</option>
+            <option value="ct2x">Candide Thovex 2.0x</option>
+            <option value="ct5">Candide Thovex 5.0</option>
+            <option value="prodigy0">Prodigy 0.0</option>
+            <option value="prodigy0x">Prodigy 0.0X</option>
+            <option value="prodigy4">Prodigy 4.0</option>
+            <option value="dictator2">Dictator 2.0</option>
+            <option value="agent1">Agent 1.0</option>
+            <option value="agent4">Agent 4.0</option>
+            <option value="blaster2">Blaster II Helmet</option>
+            <option value="trooper2vi">Trooper 2Vi Mips >A Apex Helmet</option>
+            <option value="ascender">Ascender Helmet</option>
+            <option value="grimnir2vi">Grimnir 2Vi Mips Helmet</option>
+            <option value="switcher">Switcher Mips Helmet</option>
+            <option value="agentpoleblack">Agent Pole Black</option>
+            <option value="factionpolered">Faction Pole Red</option>
+            <option value="factionpoleyellow">Faction Pole Yellow</option>
+            <option value="ctpoleorange">CT Pole Orange</option>
+            <option value="ctpoleblack">CT Pole Black</option>
+            <option value="prodigypoleblue">Prodigy Pole Blue</option>
+            <option value="prodigyjr">Prodigy JR</option>
+          </select>
+          <div id="lct1">
+            <img
+              src="bilder/skis-ct1.png"
+              alt="ct1"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 1.0</div>
+            <div>
+              <span class="line-through">4999kr</span>
+              <span class="red">3999kr</span>
+            </div>
+          </div>
+          <div id="lct2x">
+            <img
+              src="bilder/skis-ct2x.png"
+              alt="ct2x"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 2.0X</div>
+            <div>5999kr</div>
+          </div>
+          <div id="lct5">
+            <img
+              src="bilder/skis-ct5.jpg"
+              alt="ct5"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 5.0</div>
+            <div>7999kr</div>
+          </div>
+          <div id="lprodigy0">
+            <img
+              src="bilder/skis-prodigy0.jpg"
+              alt="prodigy0"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 0.0</div>
+            <div>2999kr</div>
+          </div>
+          <div id="lprodigy0x">
+            <img
+              src="bilder/skis-prodigy0x.jpg"
+              alt="prodigy0x"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 0.0x</div>
+            <div>2999kr</div>
+          </div>
+          <div id="lprodigy4">
+            <img
+              src="bilder/skis-prodigy4.jpg"
+              alt="prodigy4"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 4.0</div>
+            <div>6499kr</div>
+          </div>
+          <div id="ldictator2">
+            <img
+              src="bilder/skis-dictator2.jpg"
+              alt="dictator2"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION DICTATOR 2.0</div>
+            <div>6299kr</div>
+          </div>
+          <div id="lagent1">
+            <img
+              src="bilder/skis-agent1.jpg"
+              alt="agent1"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION AGENT 1.0</div>
+            <div>5999kr</div>
+          </div>
+          <div id="lagent4">
+            <img
+              src="bilder/skis-agent4.jpg"
+              alt="agent4"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION AGENT 4.0</div>
+            <div>7499kr</div>
+          </div>
+          <div id="lblaster2">
+            <img
+              src="bilder/helmets-blaster2.png"
+              alt="blaster2"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Blaster II Helmet</div>
+            <div>
+              <span class="line-through">999kr</span>
+              <span class="red">699kr</span>
+            </div>
+          </div>
+          <div id="ltrooper2vi">
+            <img
+              src="bilder/helmets-trooper2vi.png"
+              alt="trooper2vi"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Trooper 2VI Mips >A Apex Helmet</div>
+            <div>3199kr</div>
+          </div>
+          <div id="lascender">
+            <img
+              src="bilder/helmets-ascender.jpg"
+              alt="ascender"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Ascender Helmet</div>
+            <div>1699kr</div>
+          </div>
+          <div id="lgrimnir2vi">
+            <img
+              src="bilder/helmets-grimnir2vi.jpg"
+              alt="grimnir2vi"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Grimnir 2VI Mips Helmet</div>
+            <div>3999kr</div>
+          </div>
+          <div id="lswitcher">
+            <img
+              src="bilder/helmets-switcher.jpg"
+              alt="switcher"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Switcher Mips Helmet</div>
+            <div>2499kr</div>
+          </div>
+          <div id="lagentpoleblack">
+            <img
+              src="bilder/poles-agentpoleblack.png"
+              alt="agentpoleblack"
+              class="produkt-border product-img"
+            />
+            <div class="bold">AGENT POLE BLACK</div>
+            <div>
+              <span class="line-through">799kr</span>
+              <span class="red">599kr</span>
+            </div>
+          </div>
+          <div id="lfactionpolered">
+            <img
+              src="bilder/poles-factionpolered.jpg"
+              alt="factionpolered"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION POLE RED</div>
+            <div>599kr</div>
+          </div>
+          <div id="lfactionpoleyellow">
+            <img
+              src="bilder/poles-factionpoleyellow.jpg"
+              alt="factionpoleyellow"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION POLE YELLOW</div>
+            <div>599kr</div>
+          </div>
+          <div id="lctpoleorange">
+            <img
+              src="bilder/poles-ctpoleorange.jpg"
+              alt="ctpoleorange"
+              class="produkt-border product-img"
+            />
+            <div class="bold">CT POLE ORANGE</div>
+            <div>499kr</div>
+          </div>
+          <div id="lctpoleblack">
+            <img
+              src="bilder/poles-ctpoleblack.jpg"
+              alt="ctpoleblack"
+              class="produkt-border product-img"
+            />
+            <div class="bold">CT POLE BLACK</div>
+            <div>499kr</div>
+          </div>
+          <div id="lprodigypoleblue">
+            <img
+              src="bilder/poles-prodigypoleblue.jpg"
+              alt="prodigypoleblue"
+              class="produkt-border product-img"
+            />
+            <div class="bold">PRODIGY POLE BLUE</div>
+            <div>399kr</div>
+          </div>
+          <div id="lprodigyjr">
+            <img
+              src="bilder/poles-prodigyjr.jpg"
+              alt="prodigyjr"
+              class="produkt-border product-img"
+            />
+            <div class="bold">PRODIGY JR</div>
+            <div>349kr</div>
+          </div>
+        </div>
+        <div class="compare2">
+          <select
+            class="product-select-half"
+            name="comparison-product1"
+            onchange="displayComparisonRight(this)"
+          >
+            <option value="">--CHOOSE PRODUCT--</option>
+            <option value="ct1">Candide Thovex 1.0</option>
+            <option value="ct2x">Candide Thovex 2.0x</option>
+            <option value="ct5">Candide Thovex 5.0</option>
+            <option value="prodigy0">Prodigy 0.0</option>
+            <option value="prodigy0x">Prodigy 0.0X</option>
+            <option value="prodigy4">Prodigy 4.0</option>
+            <option value="dictator2">Dictator 2.0</option>
+            <option value="agent1">Agent 1.0</option>
+            <option value="agent4">Agent 4.0</option>
+            <option value="blaster2">Blaster II Helmet</option>
+            <option value="trooper2vi">Trooper 2Vi Mips >A Apex Helmet</option>
+            <option value="ascender">Ascender Helmet</option>
+            <option value="grimnir2vi">Grimnir 2Vi Mips Helmet</option>
+            <option value="switcher">Switcher Mips Helmet</option>
+            <option value="agentpoleblack">Agent Pole Black</option>
+            <option value="factionpolered">Faction Pole Red</option>
+            <option value="factionpoleyellow">Faction Pole Yellow</option>
+            <option value="ctpoleorange">CT Pole Orange</option>
+            <option value="ctpoleblack">CT Pole Black</option>
+            <option value="prodigypoleblue">Prodigy Pole Blue</option>
+            <option value="prodigyjr">Prodigy JR</option>
+          </select>
+          <div id="rct1">
+            <img
+              src="bilder/skis-ct1.png"
+              alt="ct1"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 1.0</div>
+            <div>
+              <span class="line-through">4999kr</span>
+              <span class="red">3999kr</span>
+            </div>
+          </div>
+          <div id="rct2x">
+            <img
+              src="bilder/skis-ct2x.png"
+              alt="ct2x"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 2.0X</div>
+            <div>5999kr</div>
+          </div>
+          <div id="rct5">
+            <img
+              src="bilder/skis-ct5.jpg"
+              alt="ct5"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION CT 5.0</div>
+            <div>7999kr</div>
+          </div>
+          <div id="rprodigy0">
+            <img
+              src="bilder/skis-prodigy0.jpg"
+              alt="prodigy0"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 0.0</div>
+            <div>2999kr</div>
+          </div>
+          <div id="rprodigy0x">
+            <img
+              src="bilder/skis-prodigy0x.jpg"
+              alt="prodigy0x"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 0.0x</div>
+            <div>2999kr</div>
+          </div>
+          <div id="rprodigy4">
+            <img
+              src="bilder/skis-prodigy4.jpg"
+              alt="prodigy4"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION PRODIGY 4.0</div>
+            <div>6499kr</div>
+          </div>
+          <div id="rdictator2">
+            <img
+              src="bilder/skis-dictator2.jpg"
+              alt="dictator2"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION DICTATOR 2.0</div>
+            <div>6299kr</div>
+          </div>
+          <div id="ragent1">
+            <img
+              src="bilder/skis-agent1.jpg"
+              alt="agent1"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION AGENT 1.0</div>
+            <div>5999kr</div>
+          </div>
+          <div id="ragent4">
+            <img
+              src="bilder/skis-agent4.jpg"
+              alt="agent4"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION AGENT 4.0</div>
+            <div>7499kr</div>
+          </div>
+          <div id="rblaster2">
+            <img
+              src="bilder/helmets-blaster2.png"
+              alt="blaster2"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Blaster II Helmet</div>
+            <div>
+              <span class="line-through">999kr</span>
+              <span class="red">699kr</span>
+            </div>
+          </div>
+          <div id="rtrooper2vi">
+            <img
+              src="bilder/helmets-trooper2vi.png"
+              alt="trooper2vi"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Trooper 2VI Mips >A Apex Helmet</div>
+            <div>3199kr</div>
+          </div>
+          <div id="rascender">
+            <img
+              src="bilder/helmets-ascender.jpg"
+              alt="ascender"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Ascender Helmet</div>
+            <div>1699kr</div>
+          </div>
+          <div id="rgrimnir2vi">
+            <img
+              src="bilder/helmets-grimnir2vi.jpg"
+              alt="grimnir2vi"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Grimnir 2VI Mips Helmet</div>
+            <div>3999kr</div>
+          </div>
+          <div id="rswitcher">
+            <img
+              src="bilder/helmets-switcher.jpg"
+              alt="switcher"
+              class="produkt-border product-img"
+            />
+            <div class="bold">Switcher Mips Helmet</div>
+            <div>2499kr</div>
+          </div>
+          <div id="ragentpoleblack">
+            <img
+              src="bilder/poles-agentpoleblack.png"
+              alt="agentpoleblack"
+              class="produkt-border product-img"
+            />
+            <div class="bold">AGENT POLE BLACK</div>
+            <div>
+              <span class="line-through">799kr</span>
+              <span class="red">599kr</span>
+            </div>
+          </div>
+          <div id="rfactionpolered">
+            <img
+              src="bilder/poles-factionpolered.jpg"
+              alt="factionpolered"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION POLE RED</div>
+            <div>599kr</div>
+          </div>
+          <div id="rfactionpoleyellow">
+            <img
+              src="bilder/poles-factionpoleyellow.jpg"
+              alt="factionpoleyellow"
+              class="produkt-border product-img"
+            />
+            <div class="bold">FACTION POLE YELLOW</div>
+            <div>599kr</div>
+          </div>
+          <div id="rctpoleorange">
+            <img
+              src="bilder/poles-ctpoleorange.jpg"
+              alt="ctpoleorange"
+              class="produkt-border product-img"
+            />
+            <div class="bold">CT POLE ORANGE</div>
+            <div>499kr</div>
+          </div>
+          <div id="rctpoleblack">
+            <img
+              src="bilder/poles-ctpoleblack.jpg"
+              alt="ctpoleblack"
+              class="produkt-border product-img"
+            />
+            <div class="bold">CT POLE BLACK</div>
+            <div>499kr</div>
+          </div>
+          <div id="rprodigypoleblue">
+            <img
+              src="bilder/poles-prodigypoleblue.jpg"
+              alt="prodigypoleblue"
+              class="produkt-border product-img"
+            />
+            <div class="bold">PRODIGY POLE BLUE</div>
+            <div>399kr</div>
+          </div>
+          <div id="rprodigyjr">
+            <img
+              src="bilder/poles-prodigyjr.jpg"
+              alt="prodigyjr"
+              class="produkt-border product-img"
+            />
+            <div class="bold">PRODIGY JR</div>
+            <div>349kr</div>
+          </div>
+        </div>
+      </div>
+    <footer>
+      <div class="footer1">
+        <img src="bilder/company-logo.png" alt="logga" class="w10" />
+        <p><span class="bold">SKI GEEK &copy; 2022</span></p>
+      </div>
+      <div class="footer2">
+        <h5>CONTACT US</h5>
+        <p>
+          Email: tanudinärbäst@gmail.com<br />
+          Phone: +46 123 45 67
+        </p>
+      </div>
+      <div class="footer3">
+        <h4>Images: All rights reserved to:</h4>
+        <span class="bold">FACTION SKIS</span> <br />
+        <span class="bold">SWEET PROTECTION</span> <br />
+        The use of these pictures on this website has been authorized by the
+        owners of the images.
+      </div>
+    </footer>
+  </body>
+</html>

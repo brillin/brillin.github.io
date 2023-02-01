@@ -1,0 +1,966 @@
+@charset "utf-8";
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+  margin: 0;
+}
+
+/* Startsida och gemensamma klasser */
+.startsida-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "tagline tagline tagline"
+    "link_skis link_helmets link_poles"
+    "footer footer footer";
+}
+footer {
+  grid-area: footer;
+  display: grid;
+  margin-top: 50px;
+  background-color: rgb(53, 47, 47);
+  color: white;
+  text-align: center;
+  padding: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "footer1 footer2 footer3";
+}
+.footer1 {
+  grid-area: footer1;
+}
+.footer2 {
+  grid-area: footer2;
+}
+.footer3 {
+  grid-area: footer3;
+}
+.companyname {
+  font-family: "Rubik Mono One", sans-serif;
+  position: relative;
+  letter-spacing: 0.1em;
+  top: 20%;
+  right: 12%;
+  font-size: 50px;
+  display: inline;
+}
+.negative-margin {
+  margin-top: -140px;
+}
+.negative-margin3 {
+  margin-top: -30px;
+  height: 100%;
+}
+.margin {
+  margin-bottom: 7%;
+}
+.w10 {
+  width: 10%;
+}
+.w100 {
+  width: 100%;
+}
+.meny {
+  grid-area: meny;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  z-index: 2;
+  height: 120px;
+}
+nav .botnav {
+  width: 100%;
+}
+.botnav a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-size: 25px;
+  letter-spacing: 0.15em;
+  background: linear-gradient(#000, #000) center bottom;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out;
+}
+.botnav a#current {
+  font-weight: bold;
+}
+.botnav a:hover {
+  background-size: 100% 2px;
+}
+.botnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 2;
+}
+.logo-font {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+.blank {
+  grid-area: blank;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 2;
+}
+.pic {
+  grid-area: pic;
+}
+.text {
+  grid-area: tagline;
+  display: block;
+  margin: auto;
+}
+
+.link-skis {
+  grid-area: link_skis;
+  text-align: center;
+}
+.link-helmets {
+  grid-area: link_helmets;
+  text-align: center;
+}
+.link-poles {
+  grid-area: link_poles;
+  text-align: center;
+}
+.link-skis:hover,
+.link-poles:hover,
+.link-helmets:hover {
+  transition: 0.5s ease;
+  transform: scale(1.025);
+  z-index: 1;
+}
+.link-text-home {
+  position: relative;
+  font-weight: bold;
+  color: white;
+  top: 40%;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.15em;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Jämförelsesida */
+.compare-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "compare compare compare"
+    "footer footer footer";
+}
+.compare {
+  grid-area: compare;
+  display: grid;
+  width: 80%;
+  height: 500px;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas: "compare1 compare2";
+}
+.compare1 {
+  grid-area: compare1;
+  border-right: 2px solid black;
+}
+.compare2 {
+  grid-area: compare2;
+}
+
+/* IDn till javascript */
+#lct1 {
+  display: none;
+}
+#lct2x {
+  display: none;
+}
+#lct5 {
+  display: none;
+}
+#lprodigy0 {
+  display: none;
+}
+#lprodigy0x {
+  display: none;
+}
+#lprodigy4 {
+  display: none;
+}
+#ldictator2 {
+  display: none;
+}
+#lagent1 {
+  display: none;
+}
+#lagent4 {
+  display: none;
+}
+#lblaster2 {
+  display: none;
+}
+#ltrooper2vi {
+  display: none;
+}
+#lascender {
+  display: none;
+}
+#lgrimnir2vi {
+  display: none;
+}
+#lswitcher {
+  display: none;
+}
+#lagentpoleblack {
+  display: none;
+}
+#lfactionpolered {
+  display: none;
+}
+#lfactionpoleyellow {
+  display: none;
+}
+#lctpoleorange {
+  display: none;
+}
+#lctpoleblack {
+  display: none;
+}
+#lprodigypoleblue {
+  display: none;
+}
+#lprodigyjr {
+  display: none;
+}
+#rct1 {
+  display: none;
+}
+#rct2x {
+  display: none;
+}
+#rct5 {
+  display: none;
+}
+#rprodigy0 {
+  display: none;
+}
+#rprodigy0x {
+  display: none;
+}
+#rprodigy4 {
+  display: none;
+}
+#rdictator2 {
+  display: none;
+}
+#ragent1 {
+  display: none;
+}
+#ragent4 {
+  display: none;
+}
+#rblaster2 {
+  display: none;
+}
+#rtrooper2vi {
+  display: none;
+}
+#rascender {
+  display: none;
+}
+#rgrimnir2vi {
+  display: none;
+}
+#rswitcher {
+  display: none;
+}
+#ragentpoleblack {
+  display: none;
+}
+#rfactionpolered {
+  display: none;
+}
+#rfactionpoleyellow {
+  display: none;
+}
+#rctpoleorange {
+  display: none;
+}
+#rctpoleblack {
+  display: none;
+}
+#rprodigypoleblue {
+  display: none;
+}
+#rprodigyjr {
+  display: none;
+}
+
+/* Shop sida */
+.shop-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "shoplink-skis shoplink-skis shoplink-skis"
+    "shoplink-helmets shoplink-helmets shoplink-helmets"
+    "shoplink-poles shoplink-poles shoplink-poles"
+    "hotdeals hotdeals hotdeals"
+    "footer footer footer";
+}
+.shop-text {
+  position: relative;
+  font-weight: bold;
+  top: -53%;
+  font-size: 40px;
+  letter-spacing: 0.06em;
+  font-family: "Rubik Mono One", sans-serif;
+}
+.shoplink-skis {
+  grid-area: shoplink-skis;
+}
+.shoplink-helmets {
+  grid-area: shoplink-helmets;
+}
+.shoplink-poles {
+  grid-area: shoplink-poles;
+}
+.shop-img {
+  height: 85%;
+  width: 80%;
+}
+.shoplink-text {
+  position: relative;
+  font-family: "Rubik Mono One", sans-serif;
+  font-weight: bold;
+  color: black;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  top: -50%;
+  font-size: 33px;
+  letter-spacing: 0.1em;
+}
+.shoplink-skis:hover,
+.shoplink-poles:hover,
+.shoplink-helmets:hover {
+  transition: 0.5s ease;
+  transform: scale(1.025);
+}
+.hotdeals {
+  grid-area: hotdeals;
+  display: grid;
+  grid-template-areas:
+    "h2 h2 h2"
+    "hotdeal1 hotdeal2 hotdeal3";
+}
+.produkt-border {
+  border-bottom: black solid 3px;
+  margin: 20px;
+}
+.hotdeal1 {
+  grid-area: hotdeal1;
+}
+.hotdeal2 {
+  grid-area: hotdeal2;
+  margin-top: 80px;
+}
+.hotdeal3 {
+  grid-area: hotdeal3;
+}
+.hotdeal-header {
+  grid-area: h2;
+  background-image: url(bilder/hotdeals.jpg);
+  color: white;
+  padding: 50px;
+  font-family: "Rubik Mono One", sans-serif;
+}
+.bold {
+  font-weight: bold;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.red {
+  color: red;
+}
+
+/* Gemensamm sida för skid-, stav-, och hjälmprodukter*/
+.products-container {
+  display: grid;
+  width: 100%;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "products products products"
+    "shoplink shoplink shoplink"
+    "footer footer footer";
+}
+.products {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  grid-template-areas:
+    "product1 product2 product3"
+    "product4 product5 product6"
+    "product7 product8 product9";
+}
+.product-img {
+  width: 200px;
+}
+.product1 {
+  grid-area: product1;
+  margin-bottom: 20%;
+}
+.product2 {
+  grid-area: product2;
+  margin-bottom: 20%;
+}
+.product3 {
+  grid-area: product3;
+  margin-bottom: 20%;
+}
+.product4 {
+  grid-area: product4;
+  margin-bottom: 20%;
+}
+.product5 {
+  grid-area: product5;
+  margin-bottom: 20%;
+}
+.product6 {
+  grid-area: product6;
+  margin-bottom: 20%;
+}
+.product7 {
+  grid-area: product7;
+  margin-bottom: 20%;
+}
+.product8 {
+  grid-area: product8;
+  margin-bottom: 20%;
+}
+.product9 {
+  grid-area: product9;
+  margin-bottom: 20%;
+}
+.product1:hover a .bold,
+.product2:hover a .bold,
+.product3:hover a .bold,
+.product4:hover a .bold,
+.product5:hover a .bold,
+.product6:hover a .bold,
+.product7:hover a .bold,
+.product8:hover a .bold,
+.product9:hover a .bold,
+.hotdeal1:hover a .bold,
+.hotdeal2:hover a .bold,
+.hotdeal3:hover a .bold {
+  transition: 0.5s ease;
+  color: red;
+}
+
+/* Om oss sida */
+.about-container {
+  display: grid;
+  width: 100%;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "about about about"
+    "q1 q1 q1"
+    "q2 q2 q2"
+    "q3 q3 q3"
+    "q4 q4 q4"
+    "footer footer footer";
+}
+.about {
+  grid-area: about;
+  width: 80%;
+  justify-self: center;
+}
+.q1,
+.q2,
+.q3,
+.q4 {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+.q1 {
+  grid-area: q1;
+}
+.q2 {
+  grid-area: q2;
+}
+.q3 {
+  grid-area: q3;
+}
+.q4 {
+  grid-area: q4;
+}
+.question {
+  width: 100%;
+  margin-top: 30px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  font-size: 25px;
+}
+.question-txt {
+  margin-left: 10px;
+}
+.question:hover {
+  transition: 0.5s ease;
+  background-color: lightgray;
+}
+.arrow-down {
+  width: 50px;
+  float: right;
+}
+.answer {
+  padding: 10px;
+  width: 100%;
+  display: none;
+}
+
+/* Info sida för produkter (gemensam för varje produkt) */
+.produktsida-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic info info"
+    "footer footer footer";
+}
+.info {
+  grid-area: info;
+  text-align: left;
+}
+.lengths {
+  padding: 10px;
+  border: 2px solid black;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+.availablity {
+  display: flex;
+  align-items: flex-start;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.order-link {
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 2px solid #111111;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4em;
+  border-radius: 5px;
+}
+.order-link:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+}
+
+/* Beställningssida/formulär */
+.orderpage-container {
+  display: grid;
+  width: 100%;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "pic pic pic"
+    "order order order"
+    "footer footer footer";
+}
+.order {
+  grid-area: order;
+}
+.product-select {
+  width: 80%;
+  border: 2px solid #111111;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  outline: 0;
+  text-indent: 15px;
+}
+.product-select-half {
+  width: 39%;
+  margin: 0.5%;
+  border-radius: 5px;
+  border: 2px solid #111111;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  outline: 0;
+  text-indent: 15px;
+}
+
+/* IDn till javascript (beställningssida) */
+#ct1 {
+  display: none;
+}
+#ct2x {
+  display: none;
+}
+#ct5 {
+  display: none;
+}
+#prodigy0 {
+  display: none;
+}
+#prodigy0x {
+  display: none;
+}
+#prodigy4 {
+  display: none;
+}
+#dictator2 {
+  display: none;
+}
+#agent1 {
+  display: none;
+}
+#agent4 {
+  display: none;
+}
+#helmet {
+  display: none;
+}
+#agentpoleblack {
+  display: none;
+}
+#poledefault {
+  display: none;
+}
+#prodigyjr {
+  display: none;
+}
+#enterCCinfo {
+  display: none;
+}
+#enterKlarnalogin {
+  display: none;
+}
+#enterPaypallogin {
+  display: none;
+}
+#enterregion {
+  display: none;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.placeorder-button {
+  margin: 50px;
+  border: 2px solid #111111;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.4em;
+  border-radius: 5px;
+}
+.placeorder-button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+}
+
+/* Tacksida */
+.tack-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  grid-template-areas:
+    "logo blank meny"
+    "tack tack tack"
+    "footer footer footer";
+}
+.tack {
+  grid-area: tack;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: rgb(241, 241, 241);
+}
+
+/* Responsive webb design */
+@media screen and (max-width: 900px) {
+  .startsida-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "tagline"
+      "link_skis"
+      "link_helmets"
+      "link_poles"
+      "footer";
+  }
+  .compare-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "compare"
+      "footer";
+  }
+  .shop-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "shoplink-skis"
+      "shoplink-helmets"
+      "shoplink-poles"
+      "hotdeals"
+      "footer";
+  }
+  .hotdeals {
+    grid-area: hotdeals;
+    display: grid;
+    grid-template-areas:
+      "h2"
+      "hotdeal1"
+      "hotdeal2"
+      "hotdeal3";
+  }
+  footer {
+    grid-area: footer;
+    display: grid;
+    margin-top: 50px;
+    background-color: rgb(53, 47, 47);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "footer1"
+      "footer2"
+      "footer3";
+  }
+  .orderpage-container {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "order"
+      "footer";
+  }
+  .about-container {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "about"
+      "q1"
+      "q2"
+      "q3"
+      "q4"
+      "footer";
+  }
+  .products-container {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "products"
+      "shoplink"
+      "footer";
+  }
+  .produktsida-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "info"
+      "footer";
+  }
+  .info {
+    text-align: center;
+  }
+  .availablity {
+    justify-content: center;
+  }
+  .links {
+    justify-content: center;
+  }
+  .products {
+    grid-area: products;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-template-areas:
+      "product1"
+      "product2"
+      "product3"
+      "product4"
+      "product5"
+      "product6"
+      "product7"
+      "product8"
+      "product9";
+  }
+  .tack-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "tack"
+      "footer";
+  }
+  .compare-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "logo"
+      "meny"
+      "pic"
+      "compare"
+      "footer";
+  }
+  .compare {
+    grid-area: compare;
+    display: grid;
+    width: 80%;
+    height: 1200px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: auto;
+    grid-template-areas:
+      "compare1"
+      "compare2";
+  }
+  .compare1 {
+    grid-area: compare1;
+    border-bottom: 2px solid black;
+    border-right: 2px solid white;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .pic:not(.start) img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .companyname {
+    right: 0;
+  }
+
+  .order-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .radio {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 25px;
+  }
+
+  .radio img {
+    width: 60px;
+  }
+}

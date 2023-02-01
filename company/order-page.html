@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="foretag_css.css" />
+    <title>Place order</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="bilder/company-logo.png" />
+    <script src="foretag.js"></script>
+  </head>
+  <body>
+    <div class="orderpage-container">
+      <div class="logo">
+        <img src="bilder/company-logo.png" alt="Logga" height="120" />
+        <div class="logo-font">SKIGEEK</div>
+      </div>
+      <div class="blank"></div>
+      <div class="meny">
+        <nav class="botnav">
+          <a href="index.html">HOME</a>
+          <a href="shop.html" id="current">SHOP</a>
+          <a href="about.html">ABOUT</a>
+        </nav>
+      </div>
+      <div class="pic start">
+        <img src="bilder/order-page-img.png" alt="skidor" class="w100" />
+        <div class="shop-text">PLACE ORDER</div>
+      </div>
+      <div class="order">
+        <form
+          action="http://212.16.187.24/~uecmknhs/formripper/rippform.php"
+          method="post"
+        >
+          <h2>Product</h2>
+          <br />
+          <select
+            class="product-select"
+            name="product-select"
+            onchange="displayProduct(this)"
+          >
+            <option value="">--CHOOSE PRODUCT--</option>
+            <option value="ct1">Candide Thovex 1.0</option>
+            <option value="ct2x">Candide Thovex 2.0x</option>
+            <option value="ct5">Candide Thovex 5.0</option>
+            <option value="prodigy0">Prodigy 0.0</option>
+            <option value="prodigy0x">Prodigy 0.0X</option>
+            <option value="prodigy4">Prodigy 4.0</option>
+            <option value="dictator2">Dictator 2.0</option>
+            <option value="agent1">Agent 1.0</option>
+            <option value="agent4">Agent 4.0</option>
+            <option value="blaster2">Blaster II Helmet</option>
+            <option value="trooper2vi">Trooper 2Vi Mips >A Apex Helmet</option>
+            <option value="ascender">Ascender Helmet</option>
+            <option value="grimnir2vi">Grimnir 2Vi Mips Helmet</option>
+            <option value="switcher">Switcher Mips Helmet</option>
+            <option value="agentpoleblack">Agent Pole Black</option>
+            <option value="factionpolered">Faction Pole Red</option>
+            <option value="factionpoleyellow">Faction Pole Yellow</option>
+            <option value="ctpoleorange">CT Pole Orange</option>
+            <option value="ctpoleblack">CT Pole Black</option>
+            <option value="prodigypoleblue">Prodigy Pole Blue</option>
+            <option value="prodigyjr">Prodigy JR</option>
+          </select>
+          <div id="ct1">
+            <h3>Choose length</h3>
+            <select name="length-ski-ct1" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="164">164</option>
+              <option value="172">172</option>
+              <option value="178">178</option>
+              <option value="184">184</option>
+            </select>
+          </div>
+          <div id="ct2x">
+            <h3>Choose length</h3>
+            <select name="length-ski-ct2x" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="166">166</option>
+              <option value="173">173</option>
+            </select>
+          </div>
+          <div id="ct5">
+            <h3>Choose length</h3>
+            <select name="length-ski-ct5" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="183">183</option>
+              <option value="190">190</option>
+            </select>
+          </div>
+          <div id="prodigy0">
+            <h3>Choose length</h3>
+            <select name="length-ski-prodigy0" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="143">143</option>
+              <option value="150">150</option>
+              <option value="157">157</option>
+              <option value="164">164</option>
+              <option value="171">171</option>
+            </select>
+          </div>
+          <div id="prodigy0x">
+            <h3>Choose length</h3>
+            <select name="length-ski-prodigy0x" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="143">143</option>
+              <option value="150">150</option>
+              <option value="157">157</option>
+              <option value="164">164</option>
+            </select>
+          </div>
+          <div id="prodigy4">
+            <h3>Choose length</h3>
+            <select name="length-ski-prodigy4" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="179">179</option>
+              <option value="185">185</option>
+              <option value="191">191</option>
+            </select>
+          </div>
+          <div id="dictator2">
+            <h3>Choose length</h3>
+            <select name="length-ski-dictator2" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="163">163</option>
+              <option value="171">171</option>
+              <option value="179">179</option>
+              <option value="187">187</option>
+            </select>
+          </div>
+          <div id="agent1">
+            <h3>Choose length</h3>
+            <select name="length-ski-agent1" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="162">162</option>
+              <option value="170">170</option>
+              <option value="178">178</option>
+              <option value="186">186</option>
+            </select>
+          </div>
+          <div id="agent4">
+            <h3>Choose length</h3>
+            <select name="length-ski-agent4" class="product-select">
+              <option value="">--CHOOSE SKI LENGTH--</option>
+              <option value="179">179</option>
+              <option value="185">185</option>
+              <option value="191">191</option>
+            </select>
+          </div>
+          <div id="helmet">
+            <h3>Choose size</h3>
+            <select name="size-helmet" class="product-select">
+              <option value="">--CHOOSE HELMET SIZE--</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+          <div id="agentpoleblack">
+            <h3>Choose length</h3>
+            <select name="length-pole-agentpoleblack" class="product-select">
+              <option value="">--CHOOSE POLE LENGTH--</option>
+              <option value="onesize110-145">
+                ONE SIZE (ADJUSTABLE, 110-145cm)
+              </option>
+            </select>
+          </div>
+          <div id="poledefault">
+            <h3>Choose length</h3>
+            <select name="lenght-pole" class="product-select">
+              <option value="">--CHOOSE POLE LENGTH--</option>
+              <option value="110">110</option>
+              <option value="115">115</option>
+              <option value="120">120</option>
+              <option value="125">125</option>
+              <option value="130">130</option>
+              <option value="135">135</option>
+            </select>
+          </div>
+          <div id="prodigyjr">
+            <h3>Choose length</h3>
+            <select name="length-pole-prodigyjr" class="product-select">
+              <option value="">--CHOOSE POLE LENGTH--</option>
+              <option value="onesize80-105">
+                ONE SIZE (ADJUSTABLE, 80-105cm)
+              </option>
+            </select>
+          </div>
+          <h2>Contact information</h2>
+          <input
+            class="product-select"
+            type="text"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="product-select-half"
+            type="text"
+            name="fname"
+            placeholder="First name"
+            required
+          />
+          <input
+            class="product-select-half"
+            type="text"
+            name="lname"
+            placeholder="Last name"
+            required
+          />
+          <input
+            class="product-select"
+            type="text"
+            name="pnumber"
+            placeholder="Phone number"
+            required
+          />
+          <h2>Shipping adress</h2>
+          <select
+            class="product-select"
+            name="region"
+            onchange="enterRegion(this)"
+          >
+            <option>--CHOOSE REGION--</option>
+            <option value="sweden">SWEDEN</option>
+            <option value="norway">NORWAY</option>
+            <option value="finland">FINLAND</option>
+            <option value="france">FRANCE</option>
+            <option value="germany">GERMANY</option>
+            <option value="spain">SPAIN</option>
+            <option value="uk">UNITED KINGDOM</option>
+            <option value="other">OTHER</option>
+          </select>
+          <div id="enterregion">
+            <input
+              class="product-select"
+              type="text"
+              name="other-region"
+              placeholder="Enter region"
+            />
+          </div>
+          <input
+            class="product-select"
+            type="text"
+            name="adress"
+            placeholder="Adress"
+            required
+          />
+          <input
+            class="product-select-half"
+            type="text"
+            name="postalcode"
+            placeholder="Postal code"
+            required
+          />
+          <input
+            class="product-select-half"
+            type="text"
+            name="city"
+            placeholder="City"
+            required
+          />
+          <h2>Shipping</h2>
+          <div class="radio">
+            <input type="radio" value="UPS" name="shipping" required />Standard
+            UPS Shipping (3-5 bussiness days) <strong>Free</strong
+            ><img src="bilder/UPS-logo.png" alt="ups" width="100" />
+          </div>
+          <div class="radio">
+            <input type="radio" value="FedEx" name="shipping" required />FedEx
+            standard shipping (3-5 bussiness days)<strong>19kr</strong
+            ><img src="bilder/FedEx-Logo.png" alt="fedex" width="80" />
+          </div>
+          <div class="radio">
+            <input
+              type="radio"
+              value="Postnord"
+              name="shipping"
+              required
+            />Postnord express shipping (1-2 bussiness weeks)<strong
+              >79kr</strong
+            ><img src="bilder/postnord-logo.png" alt="postnord" width="80" />
+          </div>
+          <h2>Payment methods</h2>
+          <div class="radio">
+            <input
+              type="radio"
+              value="creditcard"
+              name="paymentmethod"
+              id="creditcard"
+              required
+              onclick="enterCard(this)"
+            />Credit card
+            <img src="bilder/mastercard.png" alt="mastercard" width="80" /><img
+              src="bilder/visa.png"
+              alt="visa"
+              width="80"
+            /><img src="bilder/americanex.png" alt="americanex" width="80" />
+          </div>
+          <div id="enterCCinfo">
+            <h3>Enter Credit Card information</h3>
+            <input
+              type="number"
+              class="product-select"
+              name="ccnumber"
+              placeholder="Card number"
+            />
+            <input
+              type="text"
+              class="product-select"
+              name="ccname"
+              placeholder="Name on card"
+            />
+            <input
+              type="number"
+              class="product-select-half"
+              name="cvc"
+              placeholder="CVC"
+            />
+            <input
+              type="number"
+              class="product-select-half"
+              name="expdate"
+              placeholder="Expiration date"
+            />
+          </div>
+          <div class="radio">
+            <input
+              type="radio"
+              value="klarna"
+              name="paymentmethod"
+              id="klarna"
+              required
+              onclick="enterKlarnalogin(this)"
+            />Klarna <img src="bilder/klarna.png" alt="klarna" width="80" />
+          </div>
+          <div id="enterKlarnalogin">
+            <h3>Login to Klarna</h3>
+            <input
+              type="text"
+              class="product-select"
+              name="klarnaemail"
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              class="product-select"
+              name="klarnapassword"
+              placeholder="Password"
+            />
+          </div>
+          <div class="radio">
+            <input
+              type="radio"
+              value="paypal"
+              name="paymentmethod"
+              id="paypal"
+              required
+              onclick="enterPaypallogin(this)"
+            />Paypal <img src="bilder/paypal.png" alt="paypal" width="80" />
+          </div>
+          <div id="enterPaypallogin">
+            <h3>Login to Paypal</h3>
+            <input
+              type="text"
+              class="product-select"
+              name="paypalemail"
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              class="product-select"
+              name="paypalpassword"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="placeorder-button">Place order</button>
+          <input
+            type="hidden"
+            name="s_email"
+            value="edwardfm@varmdogymnasium.se"
+          />
+          <input
+            type="hidden"
+            name="s_retur"
+            value="https://labb.vgy.se/~edwardfm/projekt/foretag/tack.html"
+          />
+          <input type="password" name="pw" value="" />
+        </form>
+      </div>
+    <footer>
+      <div class="footer1">
+        <img src="bilder/company-logo.png" alt="logga" class="w10" />
+        <p><span class="bold">SKI GEEK &copy; 2022</span></p>
+      </div>
+      <div class="footer2">
+        <h5>CONTACT US</h5>
+        <p>
+          Email: tanudinärbäst@gmail.com<br />
+          Phone: +46 123 45 67
+        </p>
+      </div>
+      <div class="footer3">
+        <h4>Images: All rights reserved to:</h4>
+        <span class="bold">FACTION SKIS</span> <br />
+        <span class="bold">SWEET PROTECTION</span> <br />
+        The use of these pictures on this website has been authorized by the
+        owners of the images.
+      </div>
+    </footer>
+  </body>
+</html>
